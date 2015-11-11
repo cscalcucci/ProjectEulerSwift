@@ -8,14 +8,20 @@ import UIKit
 
 //Find the sum of all the multiples of 3 or 5 below 1000.
 
-var multipleArray : [Int] = []
-var sumOfMultiples : Int = 0
 
-for i in 1..<1000 {
-    if i % 3 == 0 || i % 5 == 0 {
-        multipleArray.append(i)
-        sumOfMultiples += i
+func sumOfMultiples(maxNumber: Int) -> Int {
+
+    var multipleArray : [Int] = []
+    var sum : Int = 0
+
+    for i in 1..<maxNumber {
+        if i % 3 == 0 || i % 5 == 0 {
+            multipleArray.append(i)
+            sum += i
+        }
     }
+
+    return sum
 }
 
-print(sumOfMultiples)
+sumOfMultiples(1000)
